@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM python:3.6-slim
 
-RUN apk --update add python py-setuptools py-pip && \
-    pip install elasticsearch-curator==4.2.6 && \
-    apk del py-pip && \
-    rm -rf /var/cache/apk/*
+RUN pip install 'elasticsearch-curator==4.2.6'
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
