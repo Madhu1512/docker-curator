@@ -8,5 +8,7 @@ RUN apk --update add python py-setuptools py-pip && \
 
 
 COPY config/curator.yml /root/.curator/curator.yml
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/usr/bin/curator"]
+ENTRYPOINT ["/entrypoint.sh"]
