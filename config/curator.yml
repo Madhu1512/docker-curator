@@ -15,11 +15,11 @@ client:
   aws_region:
   ssl_no_validate: False
   http_auth: ${ELASTICSEARCH_USER_PASS:}
-  timeout: 30
+  timeout: 120
   master_only: False
 
 logging:
   loglevel: ${LOG_LEVEL:INFO}
-  logfile:
+  logfile: ${LOG_FILE:}
   logformat: default
   blacklist: ['elasticsearch', 'urllib3']
