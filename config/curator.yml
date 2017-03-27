@@ -20,6 +20,6 @@ client:
 
 logging:
   loglevel: ${LOG_LEVEL:INFO}
-  logfile: ${LOG_FILE:}
+  logfile: 
   logformat: default
   blacklist: ['elasticsearch', 'urllib3']
