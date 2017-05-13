@@ -2,7 +2,7 @@ FROM alpine:3.5
 
 RUN apk --update add python py-setuptools py-pip && \
     pip install --upgrade pip && \
-    pip install elasticsearch-curator==5.0.1 && \
+    pip install elasticsearch-curator==5.0.2 && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
